@@ -268,40 +268,40 @@ function Index() {
                   href="https://www.instagram.com/estero.soft/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex cursor-pointer items-center justify-between rounded-2xl border border-black/10 bg-background px-6 py-5 transition-all duration-200 hover:border-black/30 hover:shadow-[0_8px_28px_-8px_rgba(0,0,0,0.12)]"
+                  className="group flex cursor-pointer items-center justify-between rounded-2xl border border-black/10 bg-background px-4 py-4 min-[420px]:px-6 min-[420px]:py-5 transition-all duration-200 hover:border-black/30 hover:shadow-[0_8px_28px_-8px_rgba(0,0,0,0.12)]"
                 >
-                  <div className="flex items-center gap-4">
-                    <InstagramLogo className="h-12 w-12 rounded-xl shadow-sm flex-none" />
+                  <div className="flex items-center gap-3 min-[420px]:gap-4">
+                    <InstagramLogo className="h-10 w-10 min-[420px]:h-12 min-[420px]:w-12 rounded-xl shadow-sm flex-none" />
                     <div>
-                      <p className="text-[13px] font-medium uppercase tracking-widest text-muted-foreground">Instagram</p>
-                      <p className="font-display text-2xl leading-none tracking-wide">@ESTERO.SOFT</p>
+                      <p className="text-[11px] min-[420px]:text-[13px] font-medium uppercase tracking-widest text-muted-foreground">Instagram</p>
+                      <p className="font-display text-xl min-[420px]:text-2xl leading-none tracking-wide">@ESTERO.SOFT</p>
                     </div>
                   </div>
-                  <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-foreground" />
+                  <ArrowUpRight className="h-5 w-5 flex-none text-muted-foreground transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-foreground" />
                 </a>
 
                 <a
                   href="https://www.tiktok.com/@estero.soft"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex cursor-pointer items-center justify-between rounded-2xl border border-black/10 bg-background px-6 py-5 transition-all duration-200 hover:border-black/30 hover:shadow-[0_8px_28px_-8px_rgba(0,0,0,0.12)]"
+                  className="group flex cursor-pointer items-center justify-between rounded-2xl border border-black/10 bg-background px-4 py-4 min-[420px]:px-6 min-[420px]:py-5 transition-all duration-200 hover:border-black/30 hover:shadow-[0_8px_28px_-8px_rgba(0,0,0,0.12)]"
                 >
-                  <div className="flex items-center gap-4">
-                    <TikTokIcon className="h-12 w-12 rounded-xl shadow-sm flex-none" />
+                  <div className="flex items-center gap-3 min-[420px]:gap-4">
+                    <TikTokIcon className="h-10 w-10 min-[420px]:h-12 min-[420px]:w-12 rounded-xl shadow-sm flex-none" />
                     <div>
-                      <p className="text-[13px] font-medium uppercase tracking-widest text-muted-foreground">TikTok</p>
-                      <p className="font-display text-2xl leading-none tracking-wide">@ESTERO.SOFT</p>
+                      <p className="text-[11px] min-[420px]:text-[13px] font-medium uppercase tracking-widest text-muted-foreground">TikTok</p>
+                      <p className="font-display text-xl min-[420px]:text-2xl leading-none tracking-wide">@ESTERO.SOFT</p>
                     </div>
                   </div>
-                  <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-foreground" />
+                  <ArrowUpRight className="h-5 w-5 flex-none text-muted-foreground transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-foreground" />
                 </a>
-                <div className="group flex items-center justify-between rounded-2xl border border-black/10 bg-background px-6 py-5 transition-all duration-200 hover:border-black/30 hover:shadow-[0_8px_28px_-8px_rgba(0,0,0,0.12)]">
-                  <div className="flex items-center gap-4">
-                    <img src={qr} alt="QR del sitio" className="h-12 w-12 flex-none" />
-                    <div>
-                      <p className="text-[13px] font-medium uppercase tracking-widest text-muted-foreground">Compartí el sitio</p>
+                <div className="group flex items-center justify-between rounded-2xl border border-black/10 bg-background px-4 py-4 min-[420px]:px-6 min-[420px]:py-5 transition-all duration-200 hover:border-black/30 hover:shadow-[0_8px_28px_-8px_rgba(0,0,0,0.12)]">
+                  <div className="flex items-center gap-3 min-[420px]:gap-4 min-w-0">
+                    <img src={qr} alt="QR del sitio" className="h-10 w-10 min-[420px]:h-12 min-[420px]:w-12 flex-none" />
+                    <div className="min-w-0">
+                      <p className="text-[11px] min-[420px]:text-[13px] font-medium uppercase tracking-widest text-muted-foreground">Compartí el sitio</p>
                       <div className="flex items-center gap-2 mt-1">
-                        <p className="font-mono text-sm font-medium leading-none text-foreground/70">{siteUrl}</p>
+                        <p className="font-mono text-xs min-[420px]:text-sm font-medium leading-none text-foreground/70 truncate">{siteUrl}</p>
                         <button
                           onClick={handleCopy}
                           className="cursor-pointer rounded-md p-1 transition-colors hover:bg-black/5"
@@ -316,10 +316,10 @@ function Index() {
                     href={qr}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-md p-1 transition-colors hover:bg-black/5"
+                    className="flex-none rounded-md p-1 transition-colors hover:bg-black/5"
                     aria-label="Ver QR"
                   >
-                    <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-foreground" />
+                    <ArrowUpRight className="h-5 w-5 flex-none text-muted-foreground transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-foreground" />
                   </a>
                 </div>
               </div>
