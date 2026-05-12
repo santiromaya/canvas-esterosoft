@@ -270,11 +270,11 @@ function Index() {
                   rel="noopener noreferrer"
                   className="group flex cursor-pointer items-center justify-between rounded-2xl border border-black/10 bg-background px-4 py-4 min-[420px]:px-6 min-[420px]:py-5 transition-all duration-200 hover:border-black/30 hover:shadow-[0_8px_28px_-8px_rgba(0,0,0,0.12)]"
                 >
-                  <div className="flex items-center gap-3 min-[420px]:gap-4">
+                  <div className="flex items-center gap-3 min-[420px]:gap-4 min-w-0">
                     <InstagramLogo className="h-10 w-10 min-[420px]:h-12 min-[420px]:w-12 rounded-xl shadow-sm flex-none" />
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-[11px] min-[420px]:text-[13px] font-medium uppercase tracking-widest text-muted-foreground">Instagram</p>
-                      <p className="font-display text-xl min-[420px]:text-2xl leading-none tracking-wide">@ESTERO.SOFT</p>
+                      <p className="font-display text-xl min-[420px]:text-2xl leading-none tracking-wide truncate">@ESTERO.SOFT</p>
                     </div>
                   </div>
                   <ArrowUpRight className="h-5 w-5 flex-none text-muted-foreground transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-foreground" />
@@ -286,11 +286,11 @@ function Index() {
                   rel="noopener noreferrer"
                   className="group flex cursor-pointer items-center justify-between rounded-2xl border border-black/10 bg-background px-4 py-4 min-[420px]:px-6 min-[420px]:py-5 transition-all duration-200 hover:border-black/30 hover:shadow-[0_8px_28px_-8px_rgba(0,0,0,0.12)]"
                 >
-                  <div className="flex items-center gap-3 min-[420px]:gap-4">
+                  <div className="flex items-center gap-3 min-[420px]:gap-4 min-w-0">
                     <TikTokIcon className="h-10 w-10 min-[420px]:h-12 min-[420px]:w-12 rounded-xl shadow-sm flex-none" />
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-[11px] min-[420px]:text-[13px] font-medium uppercase tracking-widest text-muted-foreground">TikTok</p>
-                      <p className="font-display text-xl min-[420px]:text-2xl leading-none tracking-wide">@ESTERO.SOFT</p>
+                      <p className="font-display text-xl min-[420px]:text-2xl leading-none tracking-wide truncate">@ESTERO.SOFT</p>
                     </div>
                   </div>
                   <ArrowUpRight className="h-5 w-5 flex-none text-muted-foreground transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-foreground" />
