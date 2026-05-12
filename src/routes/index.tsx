@@ -230,8 +230,8 @@ function Index() {
 
       {/* ── Contacto ── */}
       <section id="contacto" className="border-t border-black/10 bg-card">
-        <div className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
-          <div className="grid gap-12 md:grid-cols-[1fr_1fr] md:items-center">
+        <div className="mx-auto max-w-7xl px-4 py-16 min-[420px]:px-5 min-[420px]:py-20 md:px-8 md:py-28">
+          <div className="grid gap-10 md:grid-cols-[1fr_1fr] md:items-center">
             {/* Left — foto (solo visible en desktop) */}
             <div className="hidden md:block">
               <img
@@ -242,26 +242,26 @@ function Index() {
             </div>
 
             {/* Right — texto + redes */}
-            <div className="flex flex-col justify-center gap-8">
+            <div className="flex flex-col justify-center gap-6 min-[420px]:gap-8">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-widest text-gradient-orange">
                   Seguinos
                 </p>
                 <h2
-                  className="mt-4 font-display leading-[0.9]"
-                  style={{ fontSize: "clamp(3rem, 7vw, 6rem)" }}
+                  className="mt-3 font-display leading-[0.9]"
+                  style={{ fontSize: "clamp(2.2rem, 8vw, 6rem)" }}
                 >
                   CONSTRUYAMOS<br />
                   <span className="text-gradient-orange">JUNTOS</span>
                 </h2>
-                <p className="mt-6 max-w-sm text-[16px] leading-relaxed text-muted-foreground">
+                <p className="mt-4 text-[14px] min-[420px]:text-[16px] leading-relaxed text-muted-foreground">
                   Compartimos nuestro proceso, casos y aprendizajes en redes. Seguinos y sumate a la comunidad.
                 </p>
               </div>
 
               {/* Social cards */}
-              <div className="flex flex-col gap-4">
-                <p className="text-xs font-semibold uppercase tracking-widest text-gradient-orange mt-5">
+              <div className="flex flex-col gap-3 min-[420px]:gap-4">
+                <p className="text-xs font-semibold uppercase tracking-widest text-gradient-orange mt-3 min-[420px]:mt-5">
                   Redes sociales
                 </p>
                 <a
@@ -326,7 +326,7 @@ function Index() {
             </div>
 
             {/* Foto en mobile — debajo del contenido */}
-            <div className="md:hidden">
+            <div className="md:hidden overflow-hidden rounded-3xl">
               <img
                 src={equipoImg}
                 alt="Equipo Estero"
