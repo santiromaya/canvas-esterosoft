@@ -220,7 +220,7 @@ function Index() {
             </p>
           </div>
 
-          <div className="canvas-grid grid grid-cols-1 gap-3 md:gap-4">
+          <div className="canvas-grid grid w-full grid-cols-1 gap-3 md:gap-4">
             {BLOCKS.map((b, i) => (
               <CanvasBlock key={b.id} block={b} index={i} onClick={() => setActive(b)} />
             ))}

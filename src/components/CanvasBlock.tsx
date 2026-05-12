@@ -25,7 +25,7 @@ export function CanvasBlock({ block, onClick, index }: Props) {
       whileTap={{ scale: 0.985 }}
       className={[
         "group relative cursor-pointer overflow-hidden rounded-xl border text-left",
-        "flex flex-col gap-4 px-5 pt-4 pb-2 min-h-[10.5rem]",
+        "flex flex-col gap-4 px-5 pt-4 pb-2 min-h-[10.5rem] w-full",
         "focus:outline-none focus-visible:ring-2 focus-visible:ring-primary",
         "transition-all duration-200 hover:scale-[1.03]",
         isValue
