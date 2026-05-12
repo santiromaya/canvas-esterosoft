@@ -128,18 +128,7 @@ function Index() {
             </p>
           </div>
 
-          <div
-            className="grid gap-3 md:gap-4"
-            style={{
-              gridTemplateColumns: "repeat(10, minmax(0, 1fr))",
-              gridTemplateRows: "auto auto auto",
-              gridTemplateAreas: `
-                "partners partners activities activities value value relationships relationships segments segments"
-                "partners partners resources  resources  value value channels      channels      segments segments"
-                "costs    costs    costs      costs      costs revenue revenue     revenue       revenue  revenue"
-              `,
-            }}
-          >
+          <div className="canvas-grid grid grid-cols-1 gap-3 md:gap-4">
             {BLOCKS.map((b, i) => (
               <CanvasBlock key={b.id} block={b} index={i} onClick={() => setActive(b)} />
             ))}
