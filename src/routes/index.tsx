@@ -21,6 +21,7 @@ const InstagramLogo = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 import logo from "@/assets/logo.svg";
+import equipoImg from "@/assets/equipo.svg";
 import { BLOCKS, type CanvasBlock as Block } from "@/data/canvas";
 import { CanvasBlock } from "@/components/CanvasBlock";
 import { CanvasModal } from "@/components/CanvasModal";
@@ -213,57 +214,80 @@ function Index() {
       {/* ── Contacto ── */}
       <section id="contacto" className="border-t border-black/10 bg-card">
         <div className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
-          <div className="grid gap-12 md:grid-cols-2 md:items-center">
-            {/* Left */}
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-gradient-orange">
-                Seguinos
-              </p>
-              <h2
-                className="mt-4 font-display leading-[0.9]"
-                style={{ fontSize: "clamp(3rem, 7vw, 6rem)" }}
-              >
-                CONSTRUYAMOS<br />
-                <span className="text-gradient-orange">JUNTOS</span>
-              </h2>
-              <p className="mt-6 max-w-sm text-[16px] leading-relaxed text-muted-foreground">
-                Compartimos nuestro proceso, casos y aprendizajes en redes. Seguinos y sumate a la comunidad.
-              </p>
+          <div className="grid gap-12 md:grid-cols-[1fr_1fr] md:items-center">
+            {/* Left — foto (solo visible en desktop) */}
+            <div className="hidden md:block">
+              <img
+                src={equipoImg}
+                alt="Equipo Estero"
+                className="w-full rounded-3xl shadow-md"
+              />
             </div>
 
-            {/* Right — social cards */}
-            <div className="flex flex-col gap-4">
-              <a
-                href="https://www.instagram.com/estero.soft/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex cursor-pointer items-center justify-between rounded-2xl border border-black/10 bg-background px-6 py-5 transition-all duration-200 hover:border-black/30 hover:shadow-[0_8px_28px_-8px_rgba(0,0,0,0.12)]"
-              >
-                <div className="flex items-center gap-4">
-                  <InstagramLogo className="h-12 w-12 rounded-xl shadow-sm flex-none" />
-                  <div>
-                    <p className="text-[13px] font-medium uppercase tracking-widest text-muted-foreground">Instagram</p>
-                    <p className="font-display text-2xl leading-none tracking-wide">@ESTERO.SOFT</p>
-                  </div>
-                </div>
-                <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-foreground" />
-              </a>
+            {/* Right — texto + redes */}
+            <div className="flex flex-col justify-center gap-8">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-gradient-orange">
+                  Seguinos
+                </p>
+                <h2
+                  className="mt-4 font-display leading-[0.9]"
+                  style={{ fontSize: "clamp(3rem, 7vw, 6rem)" }}
+                >
+                  CONSTRUYAMOS<br />
+                  <span className="text-gradient-orange">JUNTOS</span>
+                </h2>
+                <p className="mt-6 max-w-sm text-[16px] leading-relaxed text-muted-foreground">
+                  Compartimos nuestro proceso, casos y aprendizajes en redes. Seguinos y sumate a la comunidad.
+                </p>
+              </div>
 
-              <a
-                href="https://www.tiktok.com/@estero.soft"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex cursor-pointer items-center justify-between rounded-2xl border border-black/10 bg-background px-6 py-5 transition-all duration-200 hover:border-black/30 hover:shadow-[0_8px_28px_-8px_rgba(0,0,0,0.12)]"
-              >
-                <div className="flex items-center gap-4">
-                  <TikTokIcon className="h-12 w-12 rounded-xl shadow-sm flex-none" />
-                  <div>
-                    <p className="text-[13px] font-medium uppercase tracking-widest text-muted-foreground">TikTok</p>
-                    <p className="font-display text-2xl leading-none tracking-wide">@ESTERO.SOFT</p>
+              {/* Social cards */}
+              <div className="flex flex-col gap-4">
+                <p className="text-xs font-semibold uppercase tracking-widest text-gradient-orange mt-10">
+                  Redes sociales
+                </p>
+                <a
+                  href="https://www.instagram.com/estero.soft/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex cursor-pointer items-center justify-between rounded-2xl border border-black/10 bg-background px-6 py-5 transition-all duration-200 hover:border-black/30 hover:shadow-[0_8px_28px_-8px_rgba(0,0,0,0.12)]"
+                >
+                  <div className="flex items-center gap-4">
+                    <InstagramLogo className="h-12 w-12 rounded-xl shadow-sm flex-none" />
+                    <div>
+                      <p className="text-[13px] font-medium uppercase tracking-widest text-muted-foreground">Instagram</p>
+                      <p className="font-display text-2xl leading-none tracking-wide">@ESTERO.SOFT</p>
+                    </div>
                   </div>
-                </div>
-                <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-foreground" />
-              </a>
+                  <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-foreground" />
+                </a>
+
+                <a
+                  href="https://www.tiktok.com/@estero.soft"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex cursor-pointer items-center justify-between rounded-2xl border border-black/10 bg-background px-6 py-5 transition-all duration-200 hover:border-black/30 hover:shadow-[0_8px_28px_-8px_rgba(0,0,0,0.12)]"
+                >
+                  <div className="flex items-center gap-4">
+                    <TikTokIcon className="h-12 w-12 rounded-xl shadow-sm flex-none" />
+                    <div>
+                      <p className="text-[13px] font-medium uppercase tracking-widest text-muted-foreground">TikTok</p>
+                      <p className="font-display text-2xl leading-none tracking-wide">@ESTERO.SOFT</p>
+                    </div>
+                  </div>
+                  <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-foreground" />
+                </a>
+              </div>
+            </div>
+
+            {/* Foto en mobile — debajo del contenido */}
+            <div className="md:hidden">
+              <img
+                src={equipoImg}
+                alt="Equipo Estero"
+                className="w-full rounded-3xl shadow-md"
+              />
             </div>
           </div>
         </div>
@@ -271,12 +295,18 @@ function Index() {
 
       {/* ── Footer ── */}
       <footer className="border-t border-black/10 bg-background">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-5 py-7 text-center text-sm text-muted-foreground md:flex-row md:px-8 md:text-left">
-          <div className="flex items-center gap-2">
-            <img src={logo} alt="" className="h-10 w-10 opacity-60" />
-            <span>© {year} Estero Software — Programa Incubar · Todos los derechos reservados.</span>
+        <div className="mx-auto max-w-7xl px-5 py-7 text-sm text-muted-foreground md:px-8">
+          {/* Mobile */}
+          <div className="flex flex-col items-center gap-1 text-center md:hidden">
+            <span>© {year} Estero Software · Todos los derechos reservados.</span>
           </div>
-          <span className="text-xs">Hecho con 💛 por Estero Software </span>
+          {/* Desktop */}
+          <div className="hidden md:flex md:items-center md:justify-center md:gap-3">
+            <div className="flex items-center gap-2">
+              <img src={logo} alt="" className="h-10 w-10 opacity-60" />
+              <span>© {year} Estero Software · Todos los derechos reservados.</span>
+            </div>
+          </div>
         </div>
       </footer>
 
