@@ -301,7 +301,7 @@ function Index() {
                     <div>
                       <p className="text-[13px] font-medium uppercase tracking-widest text-muted-foreground">Compartí el sitio</p>
                       <div className="flex items-center gap-2 mt-1">
-                        <p className="font-display text-sm leading-none tracking-wide">{siteUrl}</p>
+                        <p className="font-mono text-sm font-medium leading-none text-foreground/70">{siteUrl}</p>
                         <button
                           onClick={handleCopy}
                           className="cursor-pointer rounded-md p-1 transition-colors hover:bg-black/5"
