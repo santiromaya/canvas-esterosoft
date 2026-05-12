@@ -301,7 +301,10 @@ function Index() {
                     <div className="min-w-0">
                       <p className="text-[11px] min-[420px]:text-[13px] font-medium uppercase tracking-widest text-muted-foreground">Compartí el sitio</p>
                       <div className="flex items-center gap-2 mt-1">
-                        <p className="font-mono text-xs min-[420px]:text-sm font-medium leading-none text-foreground/70 truncate">{siteUrl}</p>
+                        <p className="font-mono text-xs min-[420px]:text-sm font-medium leading-none text-foreground/70 truncate">
+                          <span className="min-[480px]:hidden">Copiar URL</span>
+                          <span className="hidden min-[480px]:inline">{siteUrl}</span>
+                        </p>
                         <button
                           onClick={handleCopy}
                           className="cursor-pointer rounded-md p-1 transition-colors hover:bg-black/5"
