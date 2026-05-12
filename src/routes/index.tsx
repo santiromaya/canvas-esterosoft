@@ -249,7 +249,7 @@ function Index() {
                 </p>
                 <h2
                   className="mt-3 font-display leading-[0.9]"
-                  style={{ fontSize: "clamp(2.2rem, 8vw, 6rem)" }}
+                  style={{ fontSize: "clamp(2.25rem, 8vw, 6rem)" }}
                 >
                   CONSTRUYAMOS<br />
                   <span className="text-gradient-orange">JUNTOS</span>
