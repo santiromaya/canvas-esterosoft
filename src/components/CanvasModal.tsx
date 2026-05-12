@@ -43,7 +43,7 @@ export function CanvasModal({ block, onClose }: Props) {
                       </Dialog.Description>
                     </div>
                   </div>
-                  <Dialog.Close className="rounded-full p-1.5 text-foreground/60 transition-colors hover:bg-muted hover:text-foreground">
+                  <Dialog.Close className="cursor-pointer rounded-full p-1.5 text-foreground/60 transition-colors hover:bg-muted hover:text-foreground">
                     <X className="h-5 w-5" />
                     <span className="sr-only">Cerrar</span>
                   </Dialog.Close>
@@ -63,7 +63,7 @@ export function CanvasModal({ block, onClose }: Props) {
                             initial={{ opacity: 0, x: -6 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.04 * j + 0.05 * i, duration: 0.25 }}
-                            className="flex items-start gap-3 text-[15px] text-foreground"
+                            className="flex items-start gap-3 text-[14px] leading-snug font-medium text-muted-foreground"
                           >
                             <span className="mt-2 inline-block h-1.5 w-1.5 flex-none rounded-full gradient-orange" />
                             <span>{item}</span>

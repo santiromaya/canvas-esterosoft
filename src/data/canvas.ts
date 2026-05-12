@@ -5,47 +5,35 @@ import {
 
 export type CanvasBlock = {
   id: string;
+  bmcNumber: number;
   title: string;
   short: string;
+  question: string;
   icon: LucideIcon;
-  area: string; // grid-area
+  area: string;
   content: { heading?: string; items: string[] }[];
 };
 
 export const BLOCKS: CanvasBlock[] = [
   {
-    id: "partners",
-    title: "Socios Clave",
-    short: "Alianzas estratégicas",
-    icon: Handshake,
-    area: "partners",
+    id: "segments",
+    bmcNumber: 1,
+    title: "Segmentos de Clientes",
+    short: "A quién servimos",
+    question: "¿Para quién estamos creando valor?",
+    icon: Users,
+    area: "segments",
     content: [
-      { items: [
-        "Plataforma Emprender (Programa Incubar)",
-        "Nodo Tecnológico",
-        "ITSE",
-        "Smart City",
-      ]},
-    ],
-  },
-  {
-    id: "activities",
-    title: "Actividades Clave",
-    short: "Lo que hacemos día a día",
-    icon: Workflow,
-    area: "activities",
-    content: [
-      { heading: "Ciclo de vida del software", items: [
-        "Planificación", "Análisis", "Diseño", "Desarrollo",
-        "Pruebas", "Implementación", "Mantenimiento",
-      ]},
-      { heading: "Comercial", items: ["Marketing", "Ventas"] },
+      { heading: "Gastronomía", items: ["Bares", "Restaurantes"] },
+      { heading: "Salud", items: ["Médicos", "Odontólogos"] },
     ],
   },
   {
     id: "value",
+    bmcNumber: 2,
     title: "Propuesta de Valor",
     short: "Por qué elegirnos",
+    question: "¿Qué valor entregamos a nuestros clientes?",
     icon: Sparkles,
     area: "value",
     content: [
@@ -58,8 +46,10 @@ export const BLOCKS: CanvasBlock[] = [
   },
   {
     id: "relationships",
+    bmcNumber: 3,
     title: "Relaciones con Clientes",
     short: "Cómo nos vinculamos",
+    question: "¿Qué tipo de relación espera cada uno de nuestros segmentos de clientes?",
     icon: Heart,
     area: "relationships",
     content: [
@@ -72,20 +62,45 @@ export const BLOCKS: CanvasBlock[] = [
     ],
   },
   {
-    id: "segments",
-    title: "Segmentos de Clientes",
-    short: "A quién servimos",
-    icon: Users,
-    area: "segments",
+    id: "channels",
+    bmcNumber: 4,
+    title: "Canales",
+    short: "Dónde nos encontramos",
+    question: "¿A través de que canales quieren los segmentos de clientes que lleguemos a ellos?",
+    icon: Share2,
+    area: "channels",
     content: [
-      { heading: "Gastronomía", items: ["Bares", "Restaurantes"] },
-      { heading: "Salud", items: ["Médicos", "Odontólogos"] },
+      { items: [
+        "Instagram @estero.soft",
+        "TikTok @estero.soft",
+        "Radio LV11",
+        "Sitio web",
+        "Boca a boca",
+      ]},
+    ],
+  },
+  {
+    id: "activities",
+    bmcNumber: 5,
+    title: "Actividades Clave",
+    short: "Lo que hacemos",
+    question: "¿Qué actividades requieren nuestra propuesta de valor?",
+    icon: Workflow,
+    area: "activities",
+    content: [
+      { heading: "Ciclo de vida del software", items: [
+        "Planificación", "Análisis", "Diseño", "Desarrollo",
+        "Pruebas", "Implementación", "Mantenimiento",
+      ]},
+      { heading: "Comercial", items: ["Marketing", "Ventas"] },
     ],
   },
   {
     id: "resources",
+    bmcNumber: 6,
     title: "Recursos Clave",
-    short: "Activos que potencian la operación",
+    short: "Activos que potencian",
+    question: "¿Qué recursos claves son requeridos por nuestra propuesta de valor?",
     icon: Boxes,
     area: "resources",
     content: [
@@ -108,25 +123,28 @@ export const BLOCKS: CanvasBlock[] = [
     ],
   },
   {
-    id: "channels",
-    title: "Canales",
-    short: "Dónde nos encontramos",
-    icon: Share2,
-    area: "channels",
+    id: "partners",
+    bmcNumber: 7,
+    title: "Socios Clave",
+    short: "Alianzas estratégicas",
+    question: "¿Quiénes son nuestros socios claves?",
+    icon: Handshake,
+    area: "partners",
     content: [
       { items: [
-        "Instagram @estero.soft",
-        "TikTok @estero.soft",
-        "Radio LV11",
-        "Sitio web",
-        "Boca a boca",
+        "Plataforma Emprender (Programa Incubar)",
+        "Nodo Tecnológico",
+        "ITSE",
+        "Smart City",
       ]},
     ],
   },
   {
     id: "costs",
-    title: "Estructura de Costos",
+    bmcNumber: 8,
+    title: "Estructura de Costes",
     short: "En qué invertimos",
+    question: "¿Cuáles son los costes más importantes inherentes a nuestro modelo de negocio?",
     icon: Receipt,
     area: "costs",
     content: [
@@ -138,8 +156,10 @@ export const BLOCKS: CanvasBlock[] = [
   },
   {
     id: "revenue",
+    bmcNumber: 9,
     title: "Fuentes de Ingreso",
     short: "Cómo generamos valor económico",
+    question: "¿Por qué valor están realmente dispuestos a pagar nuestros clientes?",
     icon: Wallet,
     area: "revenue",
     content: [
