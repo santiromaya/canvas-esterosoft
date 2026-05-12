@@ -8,31 +8,6 @@ import { CanvasBlock } from "@/components/CanvasBlock";
 import { CanvasModal } from "@/components/CanvasModal";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Modelo de Negocio Canvas — Estero Software | PreIncubar 2026" },
-      {
-        name: "description",
-        content:
-          "Business Model Canvas de Estero Software para el programa PreIncubar 2026. Innovación tecnológica desde Santiago del Estero para sectores críticos.",
-      },
-      { property: "og:title", content: "Modelo de Negocio Canvas — Estero Software" },
-      {
-        property: "og:description",
-        content:
-          "Innovación tecnológica desde Santiago del Estero para sectores críticos.",
-      },
-      { property: "og:type", content: "website" },
-    ],
-    links: [
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap",
-      },
-    ],
-  }),
   component: Index,
 });
 
