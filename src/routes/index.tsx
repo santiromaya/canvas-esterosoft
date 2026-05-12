@@ -53,6 +53,13 @@ function Index() {
     <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
 
       {/* ── Navbar flotante ── */}
+      {menuOpen && (
+        <div
+          className="fixed inset-0 z-40 md:hidden"
+          onClick={() => setMenuOpen(false)}
+          aria-hidden
+        />
+      )}
       <header className="fixed inset-x-2 top-2 z-50 md:inset-x-4 md:top-4">
         <div className="mx-auto flex max-w-7xl items-center justify-between rounded-2xl border border-black/10 bg-white/85 px-2 py-1 shadow-[0_4px_28px_-4px_rgba(0,0,0,0.10)] backdrop-blur-xl md:px-5 md:py-3">
           <a href="/" className="flex items-center gap-2.5">
