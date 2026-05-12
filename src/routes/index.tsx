@@ -60,7 +60,7 @@ function Index() {
     : { initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.6, ease: "easeOut" as const } };
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
+    <div className="min-h-screen w-full max-w-[100vw] overflow-x-clip bg-background text-foreground">
 
       {/* ── Navbar flotante ── */}
       {menuOpen && (
