@@ -62,7 +62,8 @@
 }
 
 @layer base {
-  * { border-color: var(--color-border); }
+  * { border-color: var(--color-border); box-sizing: border-box; }
+  img { max-width: 100%; }
   html, body { overflow-x: hidden; }
   html { scroll-behavior: smooth; }
   body {

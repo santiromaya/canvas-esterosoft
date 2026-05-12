@@ -229,8 +229,8 @@ function Index() {
       </section>
 
       {/* ── Contacto ── */}
-      <section id="contacto" className="border-t border-black/10 bg-card">
-        <div className="mx-auto max-w-7xl px-4 py-16 min-[420px]:px-5 min-[420px]:py-20 md:px-8 md:py-28">
+      <section id="contacto" className="border-t border-black/10 bg-card overflow-x-hidden">
+        <div className="mx-auto max-w-7xl w-full px-4 py-16 min-[420px]:px-5 min-[420px]:py-20 md:px-8 md:py-28 box-border">
           <div className="grid gap-10 md:grid-cols-[1fr_1fr] md:items-center">
             {/* Left — foto (solo visible en desktop) */}
             <div className="hidden md:block">
@@ -268,7 +268,7 @@ function Index() {
                   href="https://www.instagram.com/estero.soft/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex cursor-pointer items-center justify-between rounded-2xl border border-black/10 bg-background px-4 py-4 min-[420px]:px-6 min-[420px]:py-5 transition-all duration-200 hover:border-black/30 hover:shadow-[0_8px_28px_-8px_rgba(0,0,0,0.12)]"
+                  className="group flex w-full cursor-pointer items-center justify-between rounded-2xl border border-black/10 bg-background px-4 py-4 min-[420px]:px-6 min-[420px]:py-5 transition-all duration-200 hover:border-black/30 hover:shadow-[0_8px_28px_-8px_rgba(0,0,0,0.12)]"
                 >
                   <div className="flex items-center gap-3 min-[420px]:gap-4 min-w-0">
                     <InstagramLogo className="h-10 w-10 min-[420px]:h-12 min-[420px]:w-12 rounded-xl shadow-sm flex-none" />
@@ -284,7 +284,7 @@ function Index() {
                   href="https://www.tiktok.com/@estero.soft"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex cursor-pointer items-center justify-between rounded-2xl border border-black/10 bg-background px-4 py-4 min-[420px]:px-6 min-[420px]:py-5 transition-all duration-200 hover:border-black/30 hover:shadow-[0_8px_28px_-8px_rgba(0,0,0,0.12)]"
+                  className="group flex w-full cursor-pointer items-center justify-between rounded-2xl border border-black/10 bg-background px-4 py-4 min-[420px]:px-6 min-[420px]:py-5 transition-all duration-200 hover:border-black/30 hover:shadow-[0_8px_28px_-8px_rgba(0,0,0,0.12)]"
                 >
                   <div className="flex items-center gap-3 min-[420px]:gap-4 min-w-0">
                     <TikTokIcon className="h-10 w-10 min-[420px]:h-12 min-[420px]:w-12 rounded-xl shadow-sm flex-none" />
@@ -295,7 +295,7 @@ function Index() {
                   </div>
                   <ArrowUpRight className="h-5 w-5 flex-none text-muted-foreground transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-foreground" />
                 </a>
-                <div className="group flex items-center justify-between rounded-2xl border border-black/10 bg-background px-4 py-4 min-[420px]:px-6 min-[420px]:py-5 transition-all duration-200 hover:border-black/30 hover:shadow-[0_8px_28px_-8px_rgba(0,0,0,0.12)]">
+                <div className="group flex w-full items-center justify-between rounded-2xl border border-black/10 bg-background px-4 py-4 min-[420px]:px-6 min-[420px]:py-5 transition-all duration-200 hover:border-black/30 hover:shadow-[0_8px_28px_-8px_rgba(0,0,0,0.12)]">
                   <div className="flex items-center gap-3 min-[420px]:gap-4 min-w-0">
                     <img src={qr} alt="QR del sitio" className="h-10 w-10 min-[420px]:h-12 min-[420px]:w-12 flex-none" />
                     <div className="min-w-0">
@@ -326,11 +326,11 @@ function Index() {
             </div>
 
             {/* Foto en mobile — debajo del contenido */}
-            <div className="md:hidden overflow-hidden rounded-3xl">
+            <div className="md:hidden w-full overflow-hidden rounded-3xl">
               <img
                 src={equipoImg}
                 alt="Equipo Estero"
-                className="w-full rounded-3xl shadow-md"
+                className="w-full max-w-full block rounded-3xl shadow-md"
               />
             </div>
           </div>
