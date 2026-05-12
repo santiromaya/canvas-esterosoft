@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { motion, useReducedMotion, AnimatePresence } from "framer-motion";
-import { ArrowDown, ArrowUpRight, Heart, Menu, X } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Check, Copy, Heart, Menu, X } from "lucide-react";
 
 const InstagramLogo = (props: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="none" {...props}>
@@ -21,6 +21,7 @@ const InstagramLogo = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 import logo from "@/assets/logo.svg";
+import qr from "@/assets/QR.svg";
 import equipoImg from "@/assets/equipo.svg";
 import { BLOCKS, type CanvasBlock as Block } from "@/data/canvas";
 import { CanvasBlock } from "@/components/CanvasBlock";
@@ -42,6 +43,15 @@ const TikTokIcon = (props: React.SVGProps<SVGSVGElement>) => (
 function Index() {
   const [active, setActive] = useState<Block | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const siteUrl = window.location.origin;
+  const handleCopy = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigator.clipboard.writeText(siteUrl);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
   const year = new Date().getFullYear();
   const shouldReduceMotion = useReducedMotion();
 
@@ -285,6 +295,33 @@ function Index() {
                   </div>
                   <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-foreground" />
                 </a>
+                <div className="group flex items-center justify-between rounded-2xl border border-black/10 bg-background px-6 py-5 transition-all duration-200 hover:border-black/30 hover:shadow-[0_8px_28px_-8px_rgba(0,0,0,0.12)]">
+                  <div className="flex items-center gap-4">
+                    <img src={qr} alt="QR del sitio" className="h-12 w-12 flex-none" />
+                    <div>
+                      <p className="text-[13px] font-medium uppercase tracking-widest text-muted-foreground">Compartí el sitio</p>
+                      <div className="flex items-center gap-2 mt-1">
+                        <p className="font-mono text-sm leading-none text-foreground/70">{siteUrl}</p>
+                        <button
+                          onClick={handleCopy}
+                          className="cursor-pointer rounded-md p-1 transition-colors hover:bg-black/5"
+                          aria-label="Copiar link"
+                        >
+                          {copied ? <Check className="h-3.5 w-3.5 text-green-500" /> : <Copy className="h-3.5 w-3.5 text-muted-foreground" />}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <a
+                    href={qr}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-md p-1 transition-colors hover:bg-black/5"
+                    aria-label="Ver QR"
+                  >
+                    <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-foreground" />
+                  </a>
+                </div>
               </div>
             </div>
 
