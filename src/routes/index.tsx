@@ -261,7 +261,7 @@ function Index() {
 
               {/* Social cards */}
               <div className="flex flex-col gap-4">
-                <p className="text-xs font-semibold uppercase tracking-widest text-gradient-orange mt-10">
+                <p className="text-xs font-semibold uppercase tracking-widest text-gradient-orange mt-5">
                   Redes sociales
                 </p>
                 <a
