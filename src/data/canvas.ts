@@ -25,7 +25,7 @@ export const BLOCKS: CanvasBlock[] = [
     area: "segments",
     content: [
       { heading: "Gastronomía", items: ["Bares", "Restaurantes"] },
-      { heading: "Salud", items: ["Médicos", "Odontólogos"] },
+      { heading: "Salud", items: ["Médicos", "Otros profesionales de la salud"] },
     ],
   },
   {
