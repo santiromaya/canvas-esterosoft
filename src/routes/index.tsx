@@ -72,9 +72,9 @@ function Index() {
       )}
       <header className="fixed inset-x-2 top-2 z-50 md:inset-x-4 md:top-4">
         <div className="mx-auto flex max-w-7xl items-center justify-between rounded-2xl border border-black/10 bg-white/85 px-2 py-1 shadow-[0_4px_28px_-4px_rgba(0,0,0,0.10)] backdrop-blur-xl md:px-5 md:py-3">
-          <a href="/" className="flex items-center gap-2.5">
-            <img src={logo} alt="Estero Software" className="h-14 w-14" />
-            <span className="font-display text-2xl tracking-wider"><span style={{ color: "#2f3942" }}>ESTERO</span> <span className="text-gradient-orange">SOFTWARE</span></span>
+          <a href="/" className="flex items-center gap-1.5 min-w-0">
+            <img src={logo} alt="Estero Software" className="h-10 w-10 min-[380px]:h-14 min-[380px]:w-14 flex-none" />
+            <span className="font-display text-lg min-[380px]:text-2xl tracking-wider truncate"><span style={{ color: "#2f3942" }}>ESTERO</span> <span className="text-gradient-orange">SOFTWARE</span></span>
           </a>
           <nav className="hidden items-center gap-5 text-sm md:flex">
             <a href="#contacto" className="text-foreground/60 transition-colors duration-200 hover:text-foreground">Contacto</a>
