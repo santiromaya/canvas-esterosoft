@@ -130,7 +130,7 @@ function Index() {
       </header>
 
       {/* ── Hero ── */}
-      <section className="relative flex min-h-screen flex-col justify-center overflow-hidden pt-32 md:pt-36">
+      <section className="relative flex min-h-screen w-full flex-col justify-center overflow-hidden pt-32 md:pt-36">
         {/* Blob naranja principal */}
         <div
           aria-hidden
@@ -158,7 +158,7 @@ function Index() {
               animate: { opacity: 1, y: 0 },
               transition: { duration: 0.7, ease: "easeOut", delay: 0.1 },
             })}
-            className="font-display leading-[0.88] tracking-[-0.01em] text-[2.6rem] min-[380px]:text-[3.5rem] md:text-[clamp(3.5rem,6vw,6.5rem)]"
+            className="font-display leading-[0.88] tracking-[-0.01em] text-[1.9rem] min-[360px]:text-[2.2rem] min-[380px]:text-[3.5rem] md:text-[clamp(3.5rem,6vw,6.5rem)]"
           >
             MODELO DE NEGOCIO<br />
             <span className="text-gradient-orange">CANVAS</span>
